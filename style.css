@@ -16,14 +16,14 @@ body {
 }
 
 #arch-container {
-	width: 45vh;
-	height: 45vh;
+	width: min(45vh, 45vw);
+	height: min(45vh, 45vw);
 	margin: auto;
 	padding: 2em;
 
 	background-color: #2A2A2A;
 	border-radius: 10px;
-	border-bottom: 5px solid #1E1E1E;
+	border-bottom: 8px solid #1E1E1E;
 
 	display: flex;
 	flex-direction: column; /* stack vertically */
@@ -38,5 +38,15 @@ body {
 
 #arch-container b {
 	font-size: 2em;
+}
+
+@media (max-width: 600px) {
+	#arch-container {
+		border-bottom: 10px solid #1E1E1E;
+	}
+
+	#arch-container b {
+		font-size: 2.5em;
+	}
 }
 
